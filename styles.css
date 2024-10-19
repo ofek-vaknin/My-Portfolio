@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f4f4 ;/* צבע גוף אחיד */   
+    margin: 0; /* הסרת מרווחים על הגוף והדף */
+    padding: 0; /* הסרת רווחים */
+    height: 100%; /* חשוב להגדיר את הגובה ל-100% */
+}
+html {
+    scroll-behavior: smooth; /* מפעיל גלילה חלקה */
+}
+
+.navbar {
+    margin-top: 50px; /* מוסיף רווח מעל התפריט */
+}
+
+.navbar ul {
+    list-style-type: none; /* מסיר תבלינים מהרשימה */
+    padding: 0; /* מסיר רווחים פנימיים */
+    margin: 0; /* מסיר רווחים חיצוניים */
+    display: flex; /* מציב את הפריטים בצורה אופקית */
+    justify-content: center; /* מרכז את התפריט */
+}
+
+.navbar li {
+    margin: 0 15px; /* רווחים בין הפריטים */
+}
+
+.navbar a {
+    color: black; /* משנה את הצבע לשחור */
+    text-decoration: none; /* מסיר קו תחתון */
+    font-size: 18px; /* גודל טקסט */
+    position: relative; /* עוזר להוסיף קו תחתון */
+}
+
+.navbar a:hover {
+    text-decoration: none; /* מסיר קו תחתון בעת ריחוף */
+}
+
+.navbar a::after {
+    content: ""; /* יוצרת אלמנט ריק */
+    display: block; /* מציגה את האלמנט כבלוק */
+    width: 100%; /* רוחב הקו התחתון */
+    height: 2px; /* גובה הקו התחתון */
+    background-color: black; /* צבע הקו התחתון */
+    position: absolute; /* מציבה את הקו מתחת לקישור */
+    left: 0; /* מתחילה מהצד השמאלי */
+    bottom: -5px; /* מרחק מהבסיס של הקישור */
+    opacity: 0; /* מתחילה עם שקיפות */
+    transition: opacity 0.3s; /* אפקט חלק בשקיפות */
+}
+
+.navbar a:hover::after {
+    opacity: 1; /* הופכת את הקו התחתון לגלוי בעת ריחוף */
+}
+
+.main-image {
+    background-image: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg'); /* ודא שהנתיב נכון */
+    background-size: cover; /* מכסה את כל השטח */
+    background-position: center; /* ממקם במרכז */
+    height: 600px; /* גובה */
+    display: flex; /* תצוגת פלקס */
+    align-items: center; /* ממקם טקסט במרכז באופן אנכי */
+    justify-content: center; /* ממקם טקסט במרכז באופן אופקי */
+    position: relative;
+    margin-top: 80px;
+}
+
+.text-overlay {
+    position:absolute;/* מאפשר למקם את הטקסט על התמונה */
+    top: 50%; /* מרכז את הטקסט במרחק של 50% מלמעלה */
+    left: 50%; /* מרכז את הטקסט במרחק של 50% משמאל */
+    transform: translate(-60%, -50%); /* מתקן את המיקום כדי למרכז את הטקסט */
+    color: white; /* צבע טקסט לבן */
+}
+#welcome h1 {
+    font-size: 50px; /* גודל טקסט לשם שלך */
+    margin: 0; /* מסיר רווחים מיותרים */
+}
+
+#welcome.h2 {
+    font-size: 30px; /* גודל טקסט לתואר שלך */
+    margin: 0; /* מסיר רווחים מיותרים */
+}
+
+#about-me h3 {
+    margin-top: 80px;
+    font-size: 30px;
+    color: black; 
+}
+
+#about-me p {
+    font-size: 20px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Maintain line spacing for readability */
+}
+
+
+.second-image{
+        background-image: url('images/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg'); /* ודא שהנתיב נכון */
+        background-size: cover; /* מכסה את כל השטח */
+        background-position: center; /* ממקם במרכז */
+        height: 650px; /* גובה */
+        display: flex; /* תצוגת פלקס */
+        align-items: center; /* ממקם טקסט במרכז באופן אנכי */
+        justify-content: center; /* ממקם טקסט במרכז באופן אופקי */
+        position: relative;
+        margin-top: 100px;
+    }
+
+ .text-overlay {
+        position:absolute;/* מאפשר למקם את הטקסט על התמונה */
+        top: 50%; /* מרכז את הטקסט במרחק של 50% מלמעלה */
+        left: 50%; /* מרכז את הטקסט במרחק של 50% משמאל */
+        transform: translate(-57%, -50%); /* מתקן את המיקום כדי למרכז את הטקסט */
+        color: white; /* צבע טקסט לבן */
+    }
+#education h4/* "my education*/ {
+    margin-top: 80px;
+    font-size: 30px;
+    color: white; }
+
+#education p{
+    font-size: 20px; /* Adjust the font size as needed */
+    line-height: 1.5; /* Maintain line spacing for readability */
+}
+
+#skills {
+    padding: 50px 0; /* רווחים מלמעלה ולמטה */
+    background-color: #f2f4f4; /* צבע רקע כללי */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around; /* מפזר את התיבות עם רווח ביניהן */
+    flex-wrap: wrap; /* עוטף במידת הצורך בשורות נוספות למסכים קטנים */
+    gap: 20px; /* רווח בין התיבות */
+    padding: 20px;
+}
+
+.skill-box {
+    background-color: #0c1e1e;/* צבע רקע של כל תיבה */
+    padding: 20px;
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה */
+    flex: 1; /* כל תיבה תקבל מקום שווה */
+    max-width: 300px; /* מגבלת רוחב כדי שהתיבה לא תהיה רחבה מדי */
+}
+
+
+.skill-box ul {
+    list-style-type:disc; /* משתמש בנקודות ברשימה */
+    padding-left: 55px; /* מבטיח שהנקודות יתחילו במקום מסודר */
+}
+
+.skill-box li {
+    margin-bottom: 10px; /* רווח בין פריטי הרשימה */
+}
+
+.skill-box h5, 
+.skill-box h6 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    color: white;
+}
+  
+.skill-box ul,il {
+    font-size: 18px;
+    color:white;
+}
+
+
+
+footer {
+    display: flex;
+    justify-content: space-between; /* מרווח בין הצד השמאלי והימני */
+    align-items: center;
+    border-top: 1px solid black; /* קו עליון */
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.footer-left p {
+    margin: 0; /* מסיר רווחים על מנת ליישר את הטקסט */
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.linkdin-image {
+    margin-right: 20px; /* מרווח קטן מצד ימין */
+}
+
+.social-icon {
+    width: 28px; /* גודל מתאים ללוגו קטן */
+    height: 28px;
+    margin-right: 15px; /* מרווח מצד ימין */
+}
+
+.social-icon:hover {
+    opacity: 0.7; /* אפקט ריחוף להקטנת שקיפות */
+}
+
+.item {
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    display: none; /* הסתר את הודעת הטעינה בהתחלה */
+}
+
+
